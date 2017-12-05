@@ -18,7 +18,7 @@ namespace SwipeGesture.iOS.Effects
             var numberOfTouches = (int)SwipeGestureEffect.GetNumberOfTouches(Element);
 
             uiSwipeGestureRecognizer = new UISwipeGestureRecognizer(InvokeSwipeEvent);
-            uiSwipeGestureRecognizer.NumberOfTouchesRequired = numberOfTouches;
+            uiSwipeGestureRecognizer.NumberOfTouchesRequired = (uint)numberOfTouches;
             this.Container.AddGestureRecognizer(uiSwipeGestureRecognizer);
 
         }
