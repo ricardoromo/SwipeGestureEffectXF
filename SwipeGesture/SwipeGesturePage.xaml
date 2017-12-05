@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:SwipeGesture" 
+    xmlns:effect="clr-namespace:SwipeGesture.Effects" 
+    x:Class="SwipeGesture.SwipeGesturePage">
+	<StackLayout effect:SwipeGestureEffect.Command="{Binding SwipeCommand}" effect:SwipeGestureEffect.CommandParameter="{Binding .}" effect:SwipeGestureEffect.NumberOfTouches="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Silver"> 
+        <Label x:Name="lblswipe" Text="Swipe detected" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsVisible="false" />
+        <StackLayout.Effects>
+             <effect:SwipeGestureEffect/>
+        </StackLayout.Effects>
+    </StackLayout>
+</ContentPage>
